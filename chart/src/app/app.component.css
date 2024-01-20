@@ -1,0 +1,35 @@
+
+@import "primeicons/primeicons.css";
+
+.firstline {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ /* gap: 20px; */
+ flex-wrap: wrap;
+}
+.body{
+    background-color: #E3E4E9;
+    font-family: "neo-sans-Arabic" ,"inter" !important;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.NumberOfTicket p{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.header svg{
+    width: 15px;
+}
+
+.NumberOfTicket div{
+    background-color: #9c9d9f2a;
+    padding: 10px 15px ;
+    border-radius: 5px;
+    cursor: pointer !important;
+}
+button{
+    border: none;
+    
+}

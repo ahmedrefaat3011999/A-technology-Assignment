@@ -1,0 +1,65 @@
+.card {
+    background-color: #8a74f9;
+    border-radius: 20px
+  }
+  .card::after{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #E3E4E9;
+    top: 42%;
+    right: -15px;
+    border-radius: 50%;
+
+  }
+  .card::before{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #E3E4E9;
+    top: 42%;
+    left: -15px;
+    border-radius: 50%;
+  }
+  input{
+    border: none !important;
+  }
+  .copyTicket:hover{
+    transform: scale(1.1);
+    cursor: pointer 
+  }
+  button {
+    background-color: #8a74f9;
+    border: 1px solid white;
+    color: white;
+    width: 70px;  height:24px;
+      padding: 4px 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+  }
+  .copyThisTicket {
+    width: 226.2px;
+    height: 42px;
+    border-radius: 8.32px;
+    background-color: #ffffff;
+    color: #1c1c28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media  (max-width: 960px) {
+    .card .two {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .card::after{
+      top:34%
+    }
+    .card::before{
+      top:34%
+    }
+  } 

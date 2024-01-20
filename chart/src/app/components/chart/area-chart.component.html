@@ -1,0 +1,40 @@
+ 
+<div class="main" >
+    <div class="header col-12">
+    <div>
+      <p class="title">احصائيات استخدام القسيمة</p>
+      <div class="subtitle">05 <span>يوليو ,</span> 2023 - 05 <span>أغسطس</span> 2023  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+      </svg> </div>
+    </div>
+   <div class="options">
+    <p-dropdown [options]="options" optionLabel="name" placeholder="سنويا"></p-dropdown>
+   </div>
+    </div>
+   <div class="content" >
+      <div class="parent">
+        <div class="line-chart"style="max-width: 100% !important;">
+          <!-- <div class="chart"> -->
+            <apx-chart 
+              [series]="chartOptions.series!"
+              [chart]="chartOptions.chart!"
+              [yaxis]="chartOptions.yaxis!"
+              [xaxis]="chartOptions.xaxis!"
+              [labels]="chartOptions.labels!"
+              [stroke]="chartOptions.stroke!"
+              [title]="chartOptions.title!"
+              [dataLabels]="chartOptions.dataLabels!"
+              [fill]="chartOptions.fill!"
+              [tooltip]="chartOptions.tooltip!"
+              [grid]="chartOptions.grid!"
+              [plotOptions]="chartOptions.plotOptions!"
+              [colors]="chartOptions.colors!"
+              [legend]="chartOptions.legend!"
+              [markers]="chartOptions.markers!"
+              [states]="chartOptions.states!"
+              ></apx-chart>
+        <!-- </div> -->
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="card container">
+    <p-table
+      dir="rtl"
+      (sortFunction)="customSort($event)"
+      [customSort]="true"
+      [value]="user"
+      [paginator]="true"
+      [rows]="4"
+      [showCurrentPageReport]="true"
+      [tableStyle]="{ 'min-width': '50rem' }"
+      currentPageReportTemplate="عرض   {last} من اصل{totalRecords} "
+      (onPage)="pageChange($event)"
+      [rowsPerPageOptions]="[10, 25, 50]"
+      class="p-2"
+      
+    >
+      <ng-template pTemplate="header" >
+        <tr class="mt-4 Header ">
+          <th class="text-center">#</th>
+          <th class="text-center">المستخدم</th>
+          <th class="text-center">رقم التذكرة</th>
+          <th class="text-center" pSortableColumn="ticketPrice">
+            <p-sortIcon field="ticketPrice"></p-sortIcon> قيمى التذكرة
+          </th>
+          <th class="text-center">السينمات</th>
+          <th class="text-center">عدد الأشخاص</th>
+          <th class="text-center">عدد مرات الشراء</th>
+          <th class="text-center">التذكرة</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user class="datatTable">
+        <tr>
+          <td class="text-center">{{ user.code }}</td>
+          <td class="text-center">
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                src="{{ user.userImage }}"
+                alt=""
+                width="29.88px"
+                height="29.88px"
+              />
+              <div class="divTow p-2">
+                <div class="user">{{ user.user }}</div>
+                <div class="phone">{{ user.phone }}</div>
+              </div>
+            </div>
+          </td>
+          <td class="text-center">{{ user.ticketNumber }}</td>
+          <td class="text-center">{{ user.ticketPrice | currency : "USD": 'symbol':'1.0-0'}}</td>
+          <td class="text-center"  >{{ user.cinima }} <span  pTooltip="صيدناوي مول , برج العرب" tooltipPosition="top">...</span></td>
+          
+          <td class="text-center">{{ user.numberOfPeople }}</td>
+          <td class="text-center">{{ user.numberOfPurches }}</td>
+          <td class="text-center">
+            <div class="d-flex justify-content-between align-items-center ticketsDiv" >
+              <div class="ticketImage" width="15px" height="15px" ><img src="{{ user.ticketImage }}" alt="" /></div>
+              <div class="ticketData">{{ user.ticket }}</div>
+              <div class="ticketVector " width="15px" height="15px"><img src="{{ user.ticketVector }}" alt="" /></div>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

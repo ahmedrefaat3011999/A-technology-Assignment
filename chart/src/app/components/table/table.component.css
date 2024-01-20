@@ -1,0 +1,41 @@
+.user {
+  font-size: 11.62px;
+  font-weight: 400;
+}
+.phone {
+  font-size: 9.96px;
+  line-height: 19.92px;
+  color: #92a1ad;
+}
+.h {
+  border-radius: 10px;
+}
+.Header th {
+  color: #abaab1;
+}
+.ticketImage {
+  width: 31.67px;
+  height: 31.67px;
+  background-color: #e3e4e9;
+  border-radius: 7.92px;
+}
+.ticketVector {
+  width: 16px;
+  height: 16px;
+  border: solid 1px #8a74f9;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ticketVector img {
+  width: 10px;
+  height: 9.15px;
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    margin: 20px 0px;
+  }
+}

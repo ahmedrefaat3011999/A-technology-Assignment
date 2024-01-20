@@ -1,0 +1,39 @@
+<div class=" row" dir="rtl">
+  <div class="d-flex align-items-center my-3 col col-lg-6 col-sm-12 a">
+    <h3 class="text mx-3">مبيعات التذاكر</h3>
+
+    <span class="p-input-icon-right">
+      <i class="pi pi-search"></i>
+      <input class="rounded" type="text" pInputText [(ngModel)]="value" />
+    </span>
+    <div class="images">
+      <img
+      width="36px"
+      height="36px"
+      class="mx-2"
+      src="assets/images/Group 4849.png"
+      alt=""
+    />
+    <img
+      width="36px"
+      height="36px"
+      src="assets/images/Group 1000011201.png"
+      alt=""
+    />
+    </div>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-end col col-lg-6 col-sm-12 b">
+    <div class="mx-2">
+      <p-inputSwitch
+        class="toggleChecked"
+        [(ngModel)]="checked"
+      ></p-inputSwitch>
+    </div>
+    <div class="text-center h-100 d-flex justify-content-center align-items-center">
+      <p *ngIf="checked">مفعله</p>
+      <p *ngIf="!checked">معطله </p>
+    </div>
+    <div class="me-3"><button class="btn text-light">حجز تذكره جديده</button></div>
+  </div>
+</div>
